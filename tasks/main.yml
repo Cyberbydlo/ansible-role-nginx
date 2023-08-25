@@ -23,13 +23,6 @@
       when: nginx_type == 'opensource'
       tags: nginx_install_oss
 
-    - name: Set up NGINX Plus license
-      ansible.builtin.include_tasks: "{{ role_path }}/tasks/plus/setup-license.yml"
-      when:
-        - nginx_type == 'plus'
-        - nginx_setup_license | bool
-      tags: nginx_setup_license
-
 - name: Trigger handlers if necessary
   ansible.builtin.meta: flush_handlers
 

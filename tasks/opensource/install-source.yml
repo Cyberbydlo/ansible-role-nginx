@@ -2,7 +2,7 @@
 - name: Check for build tools
   when: nginx_install_source_build_tools | bool
   block:
-    - name: (AlmaLinux/Amazon Linux/CentOS/Oracle Linux/RHEL/Rocky Linux) Set up build tools
+    - name: (RHEL) Set up build tools
       when: ansible_facts['os_family'] == 'RedHat'
       block:
         - name: (Oracle Linux 7) Enable Oracle Linux 7 optional repositories

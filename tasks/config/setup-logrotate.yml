@@ -1,5 +1,5 @@
 ---
-- name: (Amazon Linux/CentOS/Oracle Linux/RHEL) Install logrotate
+- name: (RHEL) Install logrotate
   ansible.builtin.yum:
     name: logrotate
     state: present
